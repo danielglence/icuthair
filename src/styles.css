@@ -14,7 +14,8 @@
 html{-webkit-text-size-adjust:100%}body{min-width:320px}img{display:block;max-width:100%}h1,h2,h3{overflow-wrap:break-word}.eyebrow i{flex:0 0 auto}
 @media(max-width:900px){
   .menu-btn{width:48px;height:48px;cursor:pointer}
-  .mobile-menu{padding-right:max(20px,env(safe-area-inset-right));padding-bottom:calc(35px + env(safe-area-inset-bottom));padding-left:max(20px,env(safe-area-inset-left));overflow-y:auto}
+  .nav{overflow:visible}
+  .mobile-menu{position:absolute;inset:auto 0 auto 0;top:86px;width:100vw;height:calc(100vh - 86px);height:calc(100dvh - 86px);padding-right:max(20px,env(safe-area-inset-right));padding-bottom:calc(35px + env(safe-area-inset-bottom));padding-left:max(20px,env(safe-area-inset-left));overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
   .mobile-menu>a:not(.button){min-height:54px}
   footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
   .floating{bottom:max(12px,env(safe-area-inset-bottom));padding:6px;gap:4px;border-radius:2px;backdrop-filter:blur(16px)}
@@ -24,7 +25,8 @@ html{-webkit-text-size-adjust:100%}body{min-width:320px}img{display:block;max-wi
   html{scroll-padding-top:72px}
   .section{padding:78px 0}
   .nav-inner{gap:15px}.logo strong{font-size:24px}
-  .mobile-menu{padding-top:22px}.mobile-menu>a:not(.button){font-size:31px}
+  .mobile-menu{top:72px;height:calc(100vh - 72px);height:calc(100dvh - 72px);padding-top:22px}.mobile-menu>a:not(.button){font-size:31px;flex:0 0 auto}
+  .mobile-menu .button{flex:0 0 auto;margin-bottom:20px}
   .hero{height:auto;min-height:100svh}
   .hero-bg{inset:-5% -10%;background-position:58% 35%}
   .hero-shade{background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.38)),linear-gradient(0deg,rgba(9,9,9,.92) 0%,rgba(9,9,9,.2) 65%)}
