@@ -12,6 +12,25 @@
 
 .service-book{touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:color .18s ease,transform .18s ease}.service-book:active{color:var(--ivory);transform:translateX(4px)}
 
+/* Fast, consistent touch feedback across the interface */
+a,button,[role="button"],input,select,textarea{touch-action:manipulation}
+a,button,[role="button"]{-webkit-tap-highlight-color:rgba(198,161,91,.16)}
+.button,.menu-btn,.gallery-item,.lightbox button,.floating a,.desktop-nav a,.mobile-menu a,.footer-grid a,.footer-bottom a,.contact-lines a,.service-book,.text-link{will-change:transform;transform:translateZ(0);backface-visibility:hidden}
+.menu-btn,.gallery-item,.lightbox button,.floating a,.contact-lines a,.text-link{transition:transform .16s ease,background-color .16s ease,border-color .16s ease,color .16s ease,opacity .16s ease}
+.button:active,.menu-btn:active,.gallery-item:active,.lightbox button:active,.floating a:active,.mobile-menu a:active,.contact-lines a:active,.text-link:active{transform:translateZ(0) scale(.96);transition-duration:.06s}
+.desktop-nav a:active,.footer-grid a:active,.footer-bottom a:active,.service-book:active{opacity:.72;transition-duration:.06s}
+input,select,textarea{-webkit-tap-highlight-color:transparent}
+
+@media(hover:none) and (pointer:coarse){
+  .button:hover,.feature-card:hover,.service-card:hover{transform:none}
+  .gallery-item:hover img{transform:none}
+  .button:hover{box-shadow:0 10px 35px rgba(198,161,91,.13)}
+  .button.outline:hover{border-color:var(--line);color:inherit}
+  .button:active{transform:translateZ(0) scale(.97);filter:brightness(1.08)}
+  .feature-card:active,.service-card:active{border-color:var(--line)}
+  .gallery-item:active img{transform:scale(1.025)}
+}
+
 /* Mobile experience refinements */
 html{-webkit-text-size-adjust:100%}body{min-width:320px}img{display:block;max-width:100%}h1,h2,h3{overflow-wrap:break-word}.eyebrow i{flex:0 0 auto}
 @media(max-width:900px){
