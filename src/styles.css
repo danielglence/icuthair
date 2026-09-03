@@ -40,6 +40,7 @@ input,select,textarea{-webkit-tap-highlight-color:transparent}
   .service-book{min-height:44px;padding:10px 0;justify-content:flex-end}
   .service-book:active{transform:translate3d(3px,0,0)!important;color:var(--ivory)}
 }
+.booking-unavailable{background:#171717;border:1px solid var(--line);padding:42px;text-align:center;min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center}.booking-unavailable>svg{width:46px;height:46px;color:var(--gold);margin-bottom:20px}.booking-unavailable .eyebrow{margin-bottom:12px}.booking-unavailable h3{font-size:40px;max-width:430px}.booking-unavailable p{max-width:430px}.booking-unavailable .button{margin-top:15px}.booking-error{color:#e79a88;background:#2c1815;border:1px solid #55302a;padding:12px;font-size:12px}.appointment button:disabled{opacity:.65;cursor:wait}@media(max-width:620px){.booking-unavailable{padding:26px 20px;min-height:360px}.booking-unavailable h3{font-size:34px}}
 
 /* Mobile experience refinements */
 html{-webkit-text-size-adjust:100%}body{min-width:320px}img{display:block;max-width:100%}h1,h2,h3{overflow-wrap:break-word}.eyebrow i{flex:0 0 auto}
