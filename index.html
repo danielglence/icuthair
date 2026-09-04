@@ -18,6 +18,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://wa.me" />
     <link rel="dns-prefetch" href="https://api.whatsapp.com" />
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function (OneSignal) {
+        await OneSignal.init({
+          appId: "94e4877a-081f-4297-8789-b580aa2e9681",
+          serviceWorkerPath: "OneSignalSDKWorker.js",
+          serviceWorkerParam: { scope: "/" },
+          notifyButton: { enable: false }
+        });
+      });
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"HairSalon","name":"I Cut Hair Grooming Studio","telephone":"+91 79028 33507","address":{"@type":"PostalAddress","streetAddress":"Mudavoor, near Scrub A Dubb Car Wash","addressLocality":"Muvattupuzha","addressRegion":"Kerala","postalCode":"686669","addressCountry":"IN"},"sameAs":["https://www.instagram.com/its.me._.arun/"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"35","bestRating":"5"}}
