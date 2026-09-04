@@ -41,5 +41,5 @@ export default async function handler(request, response) {
     }),
   });
   const result = await pushResponse.json();
-  return response.status(pushResponse.ok ? 200 : 502).json(pushResponse.ok ? { sent: true, recipients: result.recipients ?? 0, notificationId: result.id } : { error: 'Push delivery failed', details: result });
+  return response.status(pushResponse.ok ? 200 : 502).json(pushResponse.ok ? { sent: true, recipients: result.recipients ?? 0, notificationId: result.id, delivery: result } : { error: 'Push delivery failed', details: result });
 }
