@@ -29,7 +29,7 @@ export default async function handler(request, response) {
     body: JSON.stringify({
       app_id: APP_ID,
       target_channel: 'push',
-      include_aliases: { external_id: ['icut-owner'] },
+      included_segments: ['Subscribed Users'],
       headings: { en: 'New booking received' },
       contents: { en: `${name.trim()} booked ${service.trim()} on ${date.trim()} at ${time.trim()}` },
       web_url: 'https://icuthair.vercel.app/owner/dashboard',
