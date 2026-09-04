@@ -1,5 +1,4 @@
 const APP_ID = '94e4877a-081f-4297-8789-b580aa2e9681';
-const OWNER_SUBSCRIPTION_ID = '86e67e16-e035-4982-a91b-0a54b4187097';
 const ALLOWED_ORIGINS = new Set([
   'https://icuthair.vercel.app',
   'https://icuthairgroomingstudio.vercel.app',
@@ -30,7 +29,7 @@ export default async function handler(request, response) {
     body: JSON.stringify({
       app_id: APP_ID,
       target_channel: 'push',
-      include_subscription_ids: [OWNER_SUBSCRIPTION_ID],
+      include_aliases: { external_id: ['icut-owner'] },
       headings: { en: 'New booking received' },
       contents: { en: `${name.trim()} booked ${service.trim()} on ${date.trim()} at ${time.trim()}` },
       web_url: 'https://icuthair.vercel.app/owner/dashboard',
