@@ -12,11 +12,11 @@ export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encode
 export const mapEmbed = `https://www.google.com/maps?q=${encodeURIComponent(`I Cut Hair Grooming Studio, ${business.address}`)}&output=embed`;
 
 export const services = [
-  { name:'Signature Haircut', description:'A considered cut shaped around your features, hair and personal style.', icon:Scissors },
-  { name:'Hair Styling', description:'A polished finish for a sharp everyday look or a special occasion.', icon:Sparkles },
+  { name:'Hair Wash & Finish', description:'A refreshing cleanse followed by careful drying and a polished finish for effortlessly sharp hair.', icon:ShowerHead },
+  { name:'Detan', description:'A refreshing detan treatment that helps remove dullness and restore a cleaner, brighter look.', icon:Sparkles },
   { name:'Beard Trim and Styling', description:'Precise shaping and clean detailing for a well-groomed beard.', icon:Blend },
-  { name:'Hair and Beard Combo', description:'A complete grooming refresh with a coordinated cut and beard finish.', icon:UserRound },
-  { name:'Hair Wash and Finish', description:'A refreshing cleanse followed by careful drying and styling.', icon:ShowerHead },
+  { name:'Haircut & Beard Combo', description:'A complete grooming experience pairing a precision haircut with expert beard shaping and a polished finish.', icon:UserRound },
+  { name:'Hair Colouring', description:'Rich, even colour tailored to your style, finished with depth, shine, and a naturally confident look.', icon:Sparkles },
   { name:"Kids’ Haircut", description:'A patient, comfortable haircut experience tailored for younger guests.', icon:Baby },
 ];
 export const serviceBookingUrl = (service) => `${business.whatsappBase}?text=${encodeURIComponent(`Hello I Cut Hair Grooming Studio, I would like to book the ${service} service.`)}`;
